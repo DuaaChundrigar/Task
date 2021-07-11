@@ -87,9 +87,9 @@ body
 {
      height:25px;
      margin-top:20px;
-     background-color:#084B8A;
+     background-color:#4c66a4;
      color:white;
-     border:1px solid #08298A;
+     border:1px solid #4c66a4;
     }
 
 #form-body
@@ -113,6 +113,9 @@ body
     text-align:left;
     }
 
+#form-body #div1 img
+{    width: 600px;
+    }
 #form-body #div1 p
 {
     font-size:20px;
@@ -249,3 +252,9 @@ body
 * {
     box-sizing: border-box;
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
