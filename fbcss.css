@@ -9,22 +9,22 @@ body
 
 }
 
-#mainHeader
+.mainHeader
 {
     width:100%;
     min-width:980px;
     background-color:#4c66a4;
    }
 
-#header 
+.header 
 {
     width:980px;
-    margin:0px auto;
+    margin-left:100px;
     padding:0px;
     height:85px;
    }
 
-#header li
+.header li
 {
     text-align: left;
     float: left;
@@ -32,12 +32,12 @@ body
     color: rgb(255, 255, 255);
     }
 
-#header #Facebook
+ .Facebook
 {
     margin-top: 25px;
     }
 
-#header #Facebook a
+.Facebook a
 {
     color:white;
     text-decoration:none;
@@ -45,25 +45,26 @@ body
     font-weight:900;
     }
 
-#header form 
+form 
 {
+    
     margin-top:15px;
     float:right;
     }
 
-#header form li
+ form li
 {
     font-size:13px;
     margin-left:15px;
     }
 
-#header form li a
+ form li a
 {
     color:#A9BCF5;
     text-decoration:none;
     }
 
-#header form li input[type="text"]
+form li input[type="text"]
 {
     margin-top:3px;
     margin-bottom:3px;
@@ -73,7 +74,7 @@ body
     padding-left:3px;
     }
 
-#header form input[type="password"]
+ form input[type="password"]
 {
      margin-top:3px;
      margin-bottom:3px;
@@ -83,99 +84,95 @@ body
      padding-left:3px;
     }
 
-#header form input[type="submit"]
+form input[type="submit"]
 {
      height:25px;
      margin-top:20px;
-     background-color:#4c66a4;
+     background-color:#385291;
      color:white;
-     border:1px solid #4c66a4;
+     border:1px solid #344d86;
     }
 
-#form-body
+.form-body
 {
-     margin:0 auto;
-     padding:0px;
+    margin-left:00px ;
+    padding:0px;
      text-align:center;
      width:980px;
     }
 
-#form-body div
-{
-     float:left;
-     font-family: helvetica, arial, sans-serif;
-    }
+    div
+    {
+         float:left;
+         font-family: helvetica, arial, sans-serif;
+        }
 
-#form-body #div1
+ .div1
 {
     margin-top:30px;
     width:590px;
     text-align:left;
     }
 
-#form-body #div1 img
+ .div1 img
 {    width: 600px;
+   
     }
-#form-body #div1 p
+ .div1 p
 {
     font-size:20px;
     font-family:arial;
     font-weight:bold;
     margin:0px;
     color:#0e385f;
+   
 }
 
-#form-body #div2
+
+ .div2
 {
     margin-top:10px;
     width:390px;
     text-align:left;
+    
 }
 
-#form-body #div2 h1
+.div2 h1
 {
     margin:0px;
     font-size:37px;
     color:#2E2E2E;
 }
 
-#form-body #div2 p
+ .div2 p
 {
     font-size:18px;
     color:#2E2E2E;
 }
 
 
-#form-body #div2 li
+.div2 li
 {
     list-style-type:none;
     margin-top:10px;
    }
 
 
-#form-body #div2 li #firstname
+.div2 li #firstname
 {
-    width:49%;
-}
-
-#form-body #div2 li #surname
+       width:49%;
+       display: inline;
+ 
+   }
+   
+ .div2 li #surname
 {
-    
-    margin-left:2%;
-    width:49%;
-}
+       display: inline;
+       width:49%;
+      
+   }
 
-#form-body #div2 li input[type="text"]
-{
-    width:100%;
-    height:40px;
-    border-radius:5px;
-    padding-left:10px;
-    font-size:18px;
-    border:1px solid #BDBDBD;
-}
-
-#form-body #div2 li input[type="password"]
+.div2 li input[type="text"]
 {
     width:100%;
     height:40px;
@@ -185,13 +182,23 @@ body
     border:1px solid #BDBDBD;
 }
 
-#form-body #div2 li select
+.div2 li input[type="password"]
+{
+    width:100%;
+    height:40px;
+    border-radius:5px;
+    padding-left:10px;
+    font-size:18px;
+    border:1px solid #BDBDBD;
+}
+
+.div2 li select
 {
     padding:4px;
     float:left;
 }
 
-#form-body #div2 li a
+.div2 li a
 {
     margin-left:10px;
     width:150px;
@@ -203,30 +210,30 @@ body
     line-height:15px;
 }
 
-#form-body #div2 li a:hover
+.div2 li a:hover
 {
     text-decoration:underline;
 }
 
-#form-body #div2 li
+.div2 li
 {
     color:#2E2E2E;
     font-size:18px;
 }
 
-#form-body #div2 #terms
+.div2 #terms
 {
     color:#424242;
     font-size:11px;
 }
 
-#form-body #div2 #terms a
+.div2 #terms a
 {
     display:inline;
     margin:0px;
 }
 
-#form-body #div2 li input[type="submit"]
+.div2 li input[type="submit"]
 {
     width:205px;
     height:45px;
