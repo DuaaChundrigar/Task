@@ -36,7 +36,7 @@ box-sizing: border-box;
     margin-left: 30%;
     text-align: center;
     background-color: rgb(88, 188, 255);
-    width: 50%;
+    /* width: 60%; */
     border-radius:17px ;
     padding: 10px;
     padding-left: 118px;
@@ -44,7 +44,24 @@ box-sizing: border-box;
     margin-top: 20%;    
     color: cyan;
 }
-
+.btn1{
+    padding: 0.7rem;
+    width: 45%;
+    border-radius: 20px 20px;
+    background-color: rgb(88, 188, 255);
+}
+.btn2{
+    padding: 0.7rem;
+    width: 45%;
+    border-radius: 20px 20px;
+    background-color: black;
+    border: 2px solid rgb(88, 188, 255);
+    margin-top: 20px;
+}
+.btn1, .btn2 > a{
+    color: whitesmoke;
+    font-weight: bold;
+}
 
 h1{
     color: rgb(255, 255, 255);
