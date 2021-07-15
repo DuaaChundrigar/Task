@@ -1,0 +1,81 @@
+
+* {
+    box-sizing: border-box;
+}
+section {
+    background-color:rgba(0, 0, 0, 0.7);
+    width: 360px;
+    height: 480px;
+    margin: 30px auto;
+    padding: 50px 30px 0 30px;
+    text-align: center;
+}
+
+h1{
+    color: red;
+    font-weight: bolder;
+    font-size: 50px;
+}
+.section h1 {
+    margin: 0 0 10px 10px;
+    margin-right: 60%;
+    padding: 0;
+    font-size: 35px;
+    color: #fff;
+}
+.check{
+      float: left;
+      margin-top: -4%;
+      margin-left: 15px;
+}
+.rem{
+        float: left;
+        margin-top: -5%;
+        margin-left: 5 px;
+        color: #fff;
+}
+.need{
+    float: right;
+    margin-top: -10%;
+}
+.loginf{
+    float: left;
+   margin-top: 18%;
+   margin-left: -32%;
+   color: rgb(122, 122, 122);
+}
+.new{
+    float: left;
+    margin-top: -2%;
+    margin-right: 35%;
+    color: rgb(105, 105, 105);
+}
+.inputOne,
+.inputTwo {
+    border-radius: 3px;
+    padding      : 14px 22px;
+    margin       : 6px 0;
+    color        : whitesmoke;
+    width: 90%;
+    background-color: rgb(80, 80, 80);
+    }
+input {
+    background-color: rgb(54, 54, 54);
+    border          : none;
+}
+.signInBtn {
+    padding: 10px;
+    width: 100%;
+    margin: 30px 2px;
+    background-color: red ;
+    border: none;
+}
+a {
+    color: #fff;
+}
+.last{
+    font-size: small; 
+    color: #fff; 
+    float: left;
+    margin-top: -2%; 
+}
