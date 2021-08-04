@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Bill Print</title>
+</head>
+<body  class="">
+   <div class="bg-gray-500 w-1/4 m-auto text-white shadow rounded">
+    <div class="flex justify-center mt-16">
+            <img src="bill.png"  alt="Logo" >
+        </div>    
+        <div class="flex justify-center">
+        <p class="text-3xl">RECEIPT </p>
+        </div>
+        <div class="flex justify-center ">
+        <table class=" border rounded ">
+            <thead>
+                <tr>
+                    <th>Q.</th>
+                    <th>Description</th>
+                    <th>Rs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.00</td>
+                    <td>Biscuit</td>
+                    <td>25.00</td>
+                </tr>
+                <tr>
+                    <td>2.00</td>
+                    <td>Chips</td>
+                    <td>10.00</td>
+                </tr>
+                <tr>
+                    <td>1.00</td>
+                    <td>Juice</td>
+                    <td>10.00</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>TOTAL</td>
+                    <td>55.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<div class="flex justify-center">
+    <p class="mt-4">Thanks for your purchase!
+   <br>
+    <button class="ml-16 mt-4 bg-red-600 px-4" id="btnPrint"  onclick="window.print()">Print</button>
+</div>
+</div>
+    <!-- <script>
+   var $btnPrint = document.querySelector("#btnPrint");
+    $btnPrint.addEventListener("click", () => {
+    window.print('btnPrint');
+});
+
+
+    </script> -->
+</body>
+</html>
