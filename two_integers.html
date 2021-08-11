@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Two Integers</title>
+</head>
+<body>
+    <div class="  whitespace-pre-line mt-16">
+    <h1 class="text-gray-700 text-2xl text-center ">Check largest number </h1>
+    
+    <div class="flex justify-center ">  
+     <input type="text" id="fnum"class="border-4 w-2/4 p-3.5 text-2xl text-center shadow-xl"
+    placeholder="Enter First Number"></input>
+</div>
+<div class="flex justify-center ">  
+     <input type="text" id="snum" class="border-4 w-2/4 p-3.5 text-2xl text-center shadow-xl"
+     placeholder="Enter Second Number"></input>
+</div>
+<span class="flex justify-center text-red-600" id="ans"></span>
+<div class="flex justify-center ">
+<button onclick="largestnum()" class="bg-red-600 text-2xl text-white px-10 py-3 rounded
+shadow-2xl">submit</button>
+</div>
+</div>
+<script>
+    function largestnum()
+    {
+        var num1, num2;
+        num1 = Number(document.getElementById("fnum").value);
+        num2 = Number(document.getElementById("snum").value);
+
+        if(num1>num2)
+        {
+            document.getElementById('ans').innerHTML=num1+" is Larger";
+        }
+        else if(num2>num1)
+        {
+            document.getElementById('ans').innerHTML=num2+" is Larger";
+        }
+        else{
+            document.getElementById('ans').innerHTML="Both are equal";
+        }
+    }
+</script>
+</body>
+</html>
