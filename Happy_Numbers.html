@@ -10,34 +10,68 @@
 
     <h1>Happy Numbers</h1>
     <h3>From 1 to 100</h3>
-    
+
     <script>
 
-        for(let i = 1 ; i <= 100 ; i++){
-            happy_number(i);      
+        // for(let i = 1 ; i <= 100 ; i++){
+        //     happy_number(i);      
+        // }
+
+        // function happy_number(num) 
+        // {
+        //     var m, n ;  // for two values such as 42 will be 4 and 2
+        //     var c = [] ;  // for storing previous value
+        //     var actualNum = num; //now the actual value
+        //     while(num != 1 && c[num] !== true)  //num is not equal to 1 and previous value not be the actual value
+        //     {
+        //         c[num] = true ; //now actual value store in the place of previous value
+        //         m = 0 ; // m is the first value which is 4 fom 42
+        //         while (num > 0) {
+        //             n = num % 10 ; // n is the second value which is 2 from 42
+        //             m += n * n ; // n^2 add in m value
+        //             num = (num  - n) / 10 ;
+        //         }
+        //         num = m ;
+        //     }
+        //     if(num == 1){
+        //         document.write(actualNum+' is happy  <br>');
+        //     }
+        // }
+        for(i=1; i<=100; i++){
+            happyNumber(i );
         }
 
-        function happy_number(num) 
-        {
-            var m, n ;  // for two values such as 42 will be 4 and 2
-            var c = [] ;  // for storing previous value
-            var actualNum = num; //now the actual value
-            while(num != 1 && c[num] !== true)  //num is not equal to 1 and previous value not be the actual value
-            {
-                c[num] = true ; //now actual value store in the place of previous value
-                m = 0 ; // m is the first value which is 4 fom 42
-                while (num > 0) {
-                    n = num % 10 ; // n is the second value which is 2 from 42
-                    m += n * n ; // n^2 add in m value
-                    num = (num  - n) / 10 ;
+        function happyNumber(num){
+
+            var m , n;
+            var c=[];
+            var actualNum = num;
+
+            while(num != 1 && c[num] !== true ){
+                c[num]= true;
+
+                m=0;
+                while(num > 0){
+                    n = num % 10;
+                    m += n*n;
+                    num = (num - n) / 10;
                 }
-                num = m ;
+                num = m;
             }
             if(num == 1){
-                document.write(actualNum+' is happy  <br>');
+                document.write(actualNum+' is happy number <br>');
             }
+
         }
-    
+
+
+
+
+
+
+
+
+
     </script>
     
 </body>
