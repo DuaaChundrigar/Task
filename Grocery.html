@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script>
+    var cash = 60;
+    var balance = 0;
+    var sugar = 50; //Sugar has priority over potatoes and onions.
+    var potato = 30; //Potatoes have priority over onions.
+    var onion = 20; //If cash is less than 30 or more than 20 the program is going to purchase onions.
+    var everyItem = false;
+    
+    if(cash < 20){
+    	document.write("Can't buy anything. <br>");
+        balance = cash;
+        document.write("The remaining balance is: "+ balance + "<br>");
+    }
+    else if(cash >= sugar + potato + onion){
+    	document.write("Everything purchased on the list. <br>");
+        balance = cash - (sugar + potato + onion);
+        everyItem = true;
+        document.write("The remaining balance is: "+ balance + "<br>");
+        
+    }
+ 	else if(cash >= sugar){
+        document.write("Sugar purchased. <br>");
+        balance = cash - sugar;
+        document.write("The remaining balance is: "+ balance + "<br>");
+    }
+    else if(cash >= potato){
+    document.write("Potatoes purchased. <br>");
+    balance += cash - potato;
+    document.write("The remaining balance is: "+ balance + "<br>");
+    }
+    else if(cash >= onion){
+    document.write("Onions purchased. <br>");
+    balance += cash - onion;
+    document.write("The remaining balance is: "+ balance + "<br>");
+    }
+    if(balance >= potato && everyItem == false){
+    	document.write("Potatoes purchased. <br>");
+    	balance = balance - potato;
+    	document.write("The remaining balance is: "+ balance + "<br>");
+    }
+    if(balance >= onion && everyItem == false){
+    	document.write("Onions purchased. <br>");
+    	balance = balance -onion;
+    	document.write("The remaining balance is: "+ balance + "<br>");
+    }
+    if(balance < 10){}
+    if(balance > 100){}
+	if(balance == 0){
+    document.write("The balance has reached zero.");
+    }
+
+    
+</script>
+
+</body>
+</html>

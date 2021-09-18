@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+</head>
+
+
+<body>
+
+<div id="users"> 
+</div>
+  
+<script>
+
+getUsers();
+function getUsers(){
+
+  fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json()).then((json) =>  {
+
+    for (let i=0; i < json.length; i++){
+          appendUserInList(json[i]);
+    }
+  });
+}
+
+getPics();
+function getPics(){
+    fetch('https://robohash.org/104.236.21.134.png')
+    for(let j=0; j=9; j++){
+        appendUserPics();
+    }
+
+}
+function appendUserInList(user){
+
+    const h1 = document.createElement("h1");
+    const node = document.createTextNode(user.name);
+    h1.appendChild(node);
+
+ 
+    const element = document.getElementById("users");
+    element.appendChild(h1);
+
+}
+
+function appendUserPics(user2){
+
+    const p = document.createElement("h3");
+    const node2 = document.createTextNode( user2);
+    p.appendChild(node2);
+
+    const element = document.getElementById("users");
+
+    element.appendChild(p);
+}
+</script>
+
+</body>
+</html>

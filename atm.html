@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var balance = 100000.0;
+
+        function getBal(){
+            alert('Your Balance is: ' + balance);
+            atm();        
+        }
+
+        function depositBal(){
+            var deposit = parseFloat(prompt('Enter Deposit Amount'));
+            if(isNaN(deposit) || deposit === ''){
+                alert('Error: Please Enter a Number');
+                depositBal();
+            }
+            else{
+                balance += deposit;
+                getBal();
+            }
+        }
+
+        function withdrawBal(){
+            var withdraw = parseFloat(prompt('Enter Withdraw Amount'));
+            if(isNaN(withdraw) || withdraw === ''){
+                alert('Please Enter a Number');
+                withdrawBal();
+            }
+            else{
+                if(withdraw <= balance){
+                   balance -= withdraw; 
+                    getBal();
+                }
+                else{
+                    alert('Insuficient Balnace');
+                    withdrawBal();
+                }
+            }
+        }
+
+        function error(){
+            alert('Error: Accept numbers are 1 through 4');
+            atm();
+        }
+
+        function exit(){
+            var leave = confirm('You have Selected Exit');
+            if(leave){
+                window.close();
+            }
+            else{
+                atm();
+            }
+        }
+
+        function atm(){
+            var choice = parseInt(prompt('Select 1.Balance 2.Deposit 3.Withdraw 4.Exit'));
+
+            if(choice === 1){
+                getBal();
+            }
+            else if (choice === 2){
+                depositBal();
+            }
+            else if (choice === 3){
+                withdrawBal();
+            }
+            else if ( choice === 4){
+                exit();
+            }
+            else{
+                error();
+            }
+        }
+        atm();
+
+
+
+
+    </script>
+</body>
+</html>

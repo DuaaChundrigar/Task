@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #timebox{
+            border: 2px solid #f00;
+            border-radius: 5px;
+            height: 180px;
+            width: 180px;
+            margin: 20px;
+            display: inline-table;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body style="background-color: rgb(211, 211, 211);">
+    
+    <h1 style="text-align: center; color: rgb(168, 7, 7);"> Different Timezones of Countries </h1>
+
+    <div id="timebox">
+    </div>
+    
+    <script>
+                const h1 = document.createElement("h1");
+                const pak = document.createTextNode("Pakistan");
+                const ind = document.createTextNode("India");
+                const ln = document.createTextNode("London");
+                const ny = document.createTextNode("New York");
+                const sau = document.createTextNode("Saudi Arab");
+                const ban = document.createTextNode("Bangladesh");
+                const tur = document.createTextNode("Turkey");
+                const sa = document.createTextNode("South Africa");
+                const af = document.createTextNode("Afghanistan");
+                const aus = document.createTextNode("Australia");
+
+                h1.appendChild(pak);
+                h1.appendChild(ind);
+                h1.appendChild(ln);
+                h1.appendChild(ny);
+                h1.appendChild(sau);
+                h1.appendChild(ban);
+                h1.appendChild(tur);
+                h1.appendChild(sa);
+                h1.appendChild(af);
+                h1.appendChild(aus);
+                
+                const p = document.createElement("p");
+                const p2 = document.createElement("p");
+                const p3 = document.createElement("p");
+                const p4 = document.createElement("p");
+                const p5 = document.createElement("p");
+                const p6 = document.createElement("p");
+                const p7 = document.createElement("p");
+                const p8 = document.createElement("p");
+                const p9 = document.createElement("p");
+                const p10 = document.createElement("p");
+                
+                setInterval(() => {
+                    
+                    p.innerHTML= new Date().toLocaleString("en-Us" , {timeZone:'Asia/Karachi',timeStyle:'full',hourCycle:'h24'});
+                    p2.innerHTML= new Date().toLocaleString("en-Us" , {timeZone:'Asia/Kolkata',timeStyle:'full',hourCycle:'h24'});
+                    p3.innerHTML= new Date().toLocaleString("en-Us" , {timeZone:'Europe/London',timeStyle:'full',hourCycle:'h24'});
+                    p4.innerHTML= new Date().toLocaleString("en-Us" , {timeZone:'America/New_york',timeStyle:'full',hourCycle:'h24'});
+                    p5.innerHTML= new Date().toLocaleString("en-Us" , {timeZone:'Asia/Riyadh',timeStyle:'full',hourCycle:'h24'});
+                    p6.innerHTML= new Date().toLocaleString("en-Us" , {timeZone:'Asia/Dhaka',timeStyle:'full',hourCycle:'h24'});
+                    p7.innerHTML= new Date().toLocaleString("en-Us" , {timeZone:'Europe/Istanbul',timeStyle:'full',hourCycle:'h24'});
+                    p8.innerHTML= new Date().toLocaleString("en-Us" , {timeZone:'Africa/Johannesburg',timeStyle:'full',hourCycle:'h24'});
+                    p9.innerHTML= new Date().toLocaleString("en-Us" , {timeZone:'Asia/Kabul',timeStyle:'full',hourCycle:'h24'});
+                    p10.innerHTML= new Date().toLocaleString("en-Us" , {timeZone:'Australia/sydney',timeStyle:'full',hourCycle:'h24'});
+
+              
+                document.body.appendChild(p);
+                document.body.appendChild(p2);
+                document.body.appendChild(p3);
+                document.body.appendChild(p4);
+                document.body.appendChild(p5);
+                document.body.appendChild(p6);
+                document.body.appendChild(p7);
+                document.body.appendChild(p8);
+                document.body.appendChild(p9);
+                document.body.appendChild(p10);
+
+
+                const element = document.getElementById("timebox");
+                element.appendChild(h1);
+                element.appendChild(p);
+                element.appendChild(p2);
+                element.appendChild(p3);
+                element.appendChild(p4);
+                element.appendChild(p5);
+                element.appendChild(p6);
+                element.appendChild(p7);
+                element.appendChild(p8);
+                element.appendChild(p9);
+                element.appendChild(p10);
+
+              }, 1000);
+ 
+                
+    </script>
+
+</body>
+</html>

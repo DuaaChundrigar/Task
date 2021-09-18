@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>ATM</title>
+</head>
+<body>
+
+    <div class=" m-48 whitespace-pre-line">
+        <h3 class="text-gray-700 text-2xl text-center ">My First Bank ATM </h3>
+  
+    <div class="flex justify-center ">  
+        <input type="number" id="input" class="border-4 w-3/4 p-3.5 text-2xl text-center shadow-xl" >
+    </div>
+    <span class="flex justify-center text-red-600" id="passs"></span>
+    <div class="flex justify-center ">
+        <button  id="btn" onclick="getBal()" class="bg-indigo-600 text-2xl text-white p-5 rounded-2xl shadow-2xl"> Balance </button>
+        <button  id="btn" onclick="depositBal()" class="bg-indigo-600 text-2xl text-white p-5 rounded-2xl shadow-2xl"> Deposit </button>
+        <button  id="btn" onclick="withdrawBal()" class="bg-indigo-600 text-2xl text-white p-5 rounded-2xl shadow-2xl"> Withdraw </button>
+    </div>
+</div>
+    
+    <script>
+        var balance = 100000.0;
+
+        function getBal(){
+            document.getElementById('passs').innerHTML='Your Balance is: ' + balance;       
+        }
+
+        function depositBal(){
+            var deposit =  document.getElementById('input').value;
+            if(isNaN(deposit) || deposit === ''){
+                document.getElementById('passs').innerHTML='Error: Please Enter a Number';
+                depositBal();
+            }
+            else{
+               Number( balance ) += Number( deposit );
+                getBal();
+            }
+        }
+
+        function withdrawBal(){
+            var withdraw =  document.getElementById('input').value;
+            if(isNaN(withdraw) || withdraw === ''){
+                document.getElementById('passs').innerHTML='Please Enter a Number';
+                withdrawBal();
+            }
+            else{
+                if(withdraw <= balance){
+                   balance -= withdraw; 
+                    getBal();
+                }
+                else{
+                    document.getElementById('passs').innerHTML='Insuficient Balnace';
+                    withdrawBal();
+                }
+            }
+        }
+
+    
+
+
+
+    </script>
+</body>
+</html>
