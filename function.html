@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Basic Calculator</title>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            #ans{
+                border: darkgray;
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+      
+        <div class="container">
+            <h2>Basic Calculation</h2>
+
+           
+              <div class="form-group form-inline">
+                <input type="number" class="form-control" id="num1" placeholder="Enter Num1" >
+              </div>
+              <div class="form-group form-inline">
+                <input type="number" class="form-control" id="num2" placeholder="Enter Num2" >
+              </div>
+              <button type="submit" class="btn btn-default" id="add" onclick="addTwoNumbers('num1','num2')">+</button>
+
+              <button type="submit" class="btn btn-default" id="sub" onclick="subTwoNumbers('num1','num2')">-</button>
+
+              <button type="submit" class="btn btn-default" id="mul" onclick="mulTwoNumbers('num1','num2')">*</button>
+
+              <button type="submit" class="btn btn-default" id="div" onclick="divTwoNumbers('num1','num2')">/</button>
+
+             <p id="ans" class="bg-blue-400 w-48 mt-10"></p>
+
+          </div>
+          
+      
+      
+
+      <script>
+
+
+        function addTwoNumbers(num1, num2){
+         	var x=document.getElementById(num1).value;
+         	var y=document.getElementById(num2).value;
+         	var sum=0;
+         	sum=Number(x)+Number(y);
+         	document.getElementById("ans").innerHTML="Ans is: " +sum;
+         }
+
+         function subTwoNumbers(num1, num2){
+         	var x=document.getElementById(num1).value;
+         	var y=document.getElementById(num2).value;
+         	var sub=0;
+         	sub=Number(x)-Number(y);
+         	document.getElementById("ans").innerHTML="Ans is: " +sub;
+         }
+
+         function mulTwoNumbers(num1, num2){
+         	var x=document.getElementById(num1).value;
+         	var y=document.getElementById(num2).value;
+         	var mul=0;
+         	mul=Number(x)*Number(y);
+         	document.getElementById("ans").innerHTML="Ans is: " +mul;
+         }
+
+         function divTwoNumbers(num1, num2){
+         	var x=document.getElementById(num1).value;
+         	var y=document.getElementById(num2).value;
+         	var div=0;
+         	div=Number(x)/Number(y);
+         	document.getElementById("ans").innerHTML="Ans is: " +div;
+         }
+
+
+
+    </script>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    </body>
+</html>
